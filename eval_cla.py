@@ -9,7 +9,7 @@ from scipy.stats import gaussian_kde
 
 # ----- Step 1: Convert genlogpqedclass1.npz to SDF files -----
 # Load NPZ data
-data = np.load('genlogpqedclass1.npz')
+data = np.load('clagenclass0.npz')
 
 # Create output folder for SDF files
 output_folder = 'class1_sdf'
