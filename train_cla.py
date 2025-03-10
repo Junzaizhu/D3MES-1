@@ -172,23 +172,18 @@ def main(args):
     #     transforms.Normalize(mean=[0.5, 0.5, 0.5], std=[0.5, 0.5, 0.5], inplace=True)
     # ])
     data = np.load('classchembl.npz')
-    # 将数据加载为 data 类型
+
     x = torch.from_numpy(data['data']).to(torch.float).cuda()
     #x = x.transpose(0, 1).to(torch.float).cuda()
 
-    # 创建包含19977个0的张量
-    zeros_tensor = torch.zeros(18178).cuda()
-    
-    # 创建包含20000个1的张量
-    ones_tensor = torch.ones(25630).cuda()
-    
-    # 创建包含20000个2的张量
-    twos_tensor = torch.full((12643,), 2).cuda()
 
-    threes_tensor = torch.full((15476,), 3).cuda()
-    
-    # 将三个张量连接起来
-    y = torch.cat((zeros_tensor, ones_tensor, twos_tensor, threes_tensor)).cuda()
+    zeros_tensor = torch.zeros(19977).cuda()
+
+    ones_tensor = torch.ones(20000).cuda()
+
+    twos_tensor = torch.full((20000,), 2).cuda()
+
+    y = torch.cat((zeros_tensor, ones_tensor, twos_tensor)).cuda()
     
     class CustomDataset(Dataset):
         def __init__(self, x, y):
