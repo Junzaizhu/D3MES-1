@@ -44,5 +44,5 @@ python sample_cla.py
 ```
 For evaluation related please run the following code:
 ```bash
-python eval_drugs.py
+python eval_cla.py
 ```
