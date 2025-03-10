@@ -9,7 +9,7 @@ from SE3Transformer.se3_transformer.model.layers.attention import AttentionBlock
 class XAttention(nn.Module):
     def __init__(
             self,
-            num_nodes: int = 27,
+            num_nodes: int = 108,
             node_fiber_channels: int = 3,
             edge_fiber_channels: int = 3,
             num_heads: int = 1,
