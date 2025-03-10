@@ -1,6 +1,8 @@
 # D3MES
-
-To facilitate data uniformity, we uploaded our processed data in Kaggle, please download the corresponding three datasets from xx first.
+To facilitate data uniformity, we uploaded our processed data to Google Drive. Please download the corresponding three datasets from the following links:
+- qm9's npz: [https://drive.google.com/drive/folders/1h19ppcuuOfhChGuZf76QgokmtEU9i846?usp=drive_link](https://drive.google.com/drive/folders/1h19ppcuuOfhChGuZf76QgokmtEU9i846?usp=drive_link)  
+- geom-drugs's npz: [https://drive.google.com/drive/folders/19m5I_TmqcD6BQoSdCXWS5ZyLhNSVRwhZ?usp=drive_link](https://drive.google.com/drive/folders/19m5I_TmqcD6BQoSdCXWS5ZyLhNSVRwhZ?usp=drive_link)  
+- chembl's npz: [https://drive.google.com/drive/folders/1M2jmsqjoT7k-MyZnpb9OHbj6D_aW9HZN?usp=drive_link](https://drive.google.com/drive/folders/1M2jmsqjoT7k-MyZnpb9OHbj6D_aW9HZN?usp=drive_link)
 
 ## 1. Randomized generation based on qm9 dataset
 
