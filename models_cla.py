@@ -251,7 +251,7 @@ class DiT(nn.Module):
         p = self.x_embedder.patch_size[0]
         #print("x.shape[1]",x.shape)
         #h = w = int(x.shape[1] ** 0.5)
-        h = 27
+        h = 36
         w = 1
         assert h * w == x.shape[1]
 
