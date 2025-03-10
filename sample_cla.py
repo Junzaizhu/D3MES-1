@@ -59,16 +59,11 @@ def main(args):
     samples, _ = samples.chunk(2, dim=0)  # Remove null class samples
 
     generated_data = samples.cpu().numpy()
-    output_npz_path = "noringgen.npz"
-    output_csv_path = "noringgen.csv"
+    output_npz_path = "clagenclass0.npz"
     
     np.savez(output_npz_path, data=generated_data)
     print(f"Generated data saved to {output_npz_path}")
     
-    first_sample = generated_data  
-    df = pd.DataFrame(first_sample.reshape(-1, first_sample.shape[-1]))  
-    df.to_csv(output_csv_path, index=False, header=False) 
-    print(f"Generated data saved to {output_csv_path}")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
