@@ -171,7 +171,7 @@ def main(args):
     #     transforms.ToTensor(),
     #     transforms.Normalize(mean=[0.5, 0.5, 0.5], std=[0.5, 0.5, 0.5], inplace=True)
     # ])
-    data = np.load('qm9.npz')
+    data = np.load('gdb911.npz')
     # 将数据加载为 data 类型
     x = torch.from_numpy(data['data']).to(torch.float).cuda()
     # #x = x.transpose(0, 1).to(torch.float).cuda()
