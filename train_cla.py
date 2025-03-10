@@ -175,17 +175,20 @@ def main(args):
     # 将数据加载为 data 类型
     x = torch.from_numpy(data['data']).to(torch.float).cuda()
     #x = x.transpose(0, 1).to(torch.float).cuda()
-    zeros_tensor = torch.zeros(14127)
 
-    # # 创建包含 65898 个 1 的张量
-    ones_tensor = torch.ones(14127)
+    # 创建包含19977个0的张量
+    zeros_tensor = torch.zeros(18178).cuda()
+    
+    # 创建包含20000个1的张量
+    ones_tensor = torch.ones(25630).cuda()
+    
+    # 创建包含20000个2的张量
+    twos_tensor = torch.full((12643,), 2).cuda()
 
-    # # 将两个张量连接起来
-    y = torch.cat((zeros_tensor, ones_tensor)).cuda()
-    #y = torch.zeros(133247).cuda()
-    # print(f"x shape: {x.shape}, dtype: {x.dtype}")
-    #print(f"y shape: {y.shape}, dtype: {y.dtype}")
-
+    threes_tensor = torch.full((15476,), 3).cuda()
+    
+    # 将三个张量连接起来
+    y = torch.cat((zeros_tensor, ones_tensor, twos_tensor, threes_tensor)).cuda()
     
     class CustomDataset(Dataset):
         def __init__(self, x, y):
